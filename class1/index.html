@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Name Generator</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Name Generator</h1>
+        <button id="generate-btn">Generate Name</button>
+        <div id="name-display"></div>
+    </div>
+
+    <script>
+        const names = [
+            "kazeem", "wande", "waju", "mary", "Ava", "Ethan", "ezekiel", "Mason",
+            "Isabella", "david", "Mia", "James", "melody", "jazzy", "ademola",
+            "Lucas", "Harper", "Henry", "Evelyn", "Alexander"
+        ];
+
+        function getRandomName() {
+            return names[Math.floor(Math.random() * names.length)];
+        }
+
+        document.getElementById('generate-btn').addEventListener('click', function() {
+            const randomName = getRandomName();
+            document.getElementById('name-display').textContent = randomName;
+        });
+    </script>
+</body>
+</html>
